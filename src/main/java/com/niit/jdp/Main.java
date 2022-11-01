@@ -13,10 +13,15 @@ public class Main {
                 "Mohd Adnan Parvez Shaikh Mukhtar", "Monica Ragunathan",
                 "Mushib Khan", "Naveen Kumar", "Sanket Gongale"};
         System.out.println("There are " + names.length + " names in the list.");
+        String luckyWinner = Main.findLuckyWinner(names);
+        JOptionPane.showMessageDialog(null, "The Lucky Winner is " + luckyWinner);
+    }
+
+    public static String findLuckyWinner(String[] names) {
+        String luckyWinner = "";
         Random random = new Random();
         int randomIndex = random.nextInt(names.length);
-        System.out.println("Lucky Winner for the Question = " + names[randomIndex]);
-        JOptionPane.showConfirmDialog(null, "Lucky Winner is: " + names[randomIndex], "Winner", JOptionPane.YES_NO_OPTION, JOptionPane.INFORMATION_MESSAGE, null);
-        JOptionPane.showInputDialog(null, "Enter your name");
+        luckyWinner = names[randomIndex];
+        return luckyWinner;
     }
 }
