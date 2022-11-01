@@ -1,4 +1,4 @@
-package com.niit.jdp;
+package io.github.sodhipinky;
 
 import javax.swing.*;
 import java.util.Random;
@@ -18,7 +18,7 @@ public class Main {
     }
 
     public static String findLuckyWinner(String[] names) {
-        String luckyWinner = "";
+        String luckyWinner;
         Random random = new Random();
         int randomIndex = random.nextInt(names.length);
         luckyWinner = names[randomIndex];
